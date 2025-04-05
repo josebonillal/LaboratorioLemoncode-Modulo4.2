@@ -1,0 +1,25 @@
+<div class="gallery">
+  <div class="selected-image">
+    <img [src]="selectedImage.src" [alt]="selectedImage.title" [style.transform]="'scale(' + zoomLevel + ')'" [rotate]="0" [step]="15"/>
+  </div>
+
+  <div class="image-list">
+    <div *ngFor="let image of images | slice:currentPage * imagesPerPage:(currentPage + 1) * imagesPerPage" class="thumbnail" (click)="selectImage(image)" [ngClass]="{'selected': selectedImage?.id === image.id}">
+      <img [src]="image.src" [alt]="image.title" />
+    </div>
+  </div>
+
+  <div class="controls">
+    <button (click)="prevImage()" [disabled]="currentIndex === 0">Anterior</button>
+    <button (click)="nextImage()" [disabled]="currentIndex === images.length - 1">Siguiente</button>
+    <button (click)="zoomIn()">Aumentar</button>
+    <button (click)="zoomOut()">Disminuir</button>
+    <button (click)="startSlideshow()" [disabled]="intervalId !== null">Play</button>
+    <button (click)="stopSlideshow()" [disabled]="intervalId === null">Stop</button>
+  </div>
+
+  <div class="pagination-controls">
+    <button (click)="prevPage()" [disabled]="currentPage === 0">Anterior Pag</button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages - 1">Siguiente Pag</button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<header class="app-header">
+  <div class="logo">
+    <a href="/">Mi Angular</a>
+  </div>
+  <nav class="nav">
+    Bienvenido, {{ auth.getUsername() }}
+    <a href="/home" (click)="logout()">Logout</a>
+  </nav>
+</header>

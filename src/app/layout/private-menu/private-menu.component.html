@@ -1,0 +1,6 @@
+<nav class="private-menu">
+  <a href="/dashboard">Dashboard</a>
+  <a href="/gallery">Galería</a>
+  <a href="/crud">CRUD</a>
+  <a *ngIf="auth.isLogged()" href="/profile">Perfil</a>
+</nav>

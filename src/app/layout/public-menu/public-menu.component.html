@@ -1,0 +1,7 @@
+<nav class="public-menu">
+  <a href="/home">Home</a>
+  <a href="/about">Acerca de</a>
+  <a *ngIf="!auth.isLogged()" href="/login">Iniciar sesión</a>
+  <a *ngIf="auth.isLogged()" href="/profile">Perfil</a>
+</nav>
+  

@@ -1,0 +1,17 @@
+.private-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #388e3c;
+    padding: 10px;
+  
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+  
+    a:hover {
+      color: #ffeb3b;
+    }
+  }
+  

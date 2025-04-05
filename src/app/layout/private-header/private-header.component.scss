@@ -1,0 +1,26 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+  
+    .logo a {
+      font-size: 1.8em;
+      color: white;
+      text-decoration: none;
+    }
+  
+    .nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+  
+    .nav a:hover {
+      color: #ffeb3b;
+    }
+  }
+  
